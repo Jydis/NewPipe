@@ -1116,7 +1116,7 @@ public class VideoDetailFragment extends BaseStateFragment<StreamInfo>
         animateView(positionView, false, 50);
 
         videoTitleTextView.setText(name != null ? name : "");
-        videoTitleTextView.setMaxLines(1);
+        videoTitleTextView.setMaxLines(3);
         animateView(videoTitleTextView, true, 0);
 
         videoDescriptionRootLayout.setVisibility(View.GONE);
@@ -1233,13 +1233,13 @@ public class VideoDetailFragment extends BaseStateFragment<StreamInfo>
             detailDurationView.setVisibility(View.GONE);
         }
 
-        videoDescriptionView.setVisibility(View.GONE);
+        videoDescriptionView.setVisibility(View.VISIBLE);
         videoTitleRoot.setClickable(true);
         videoTitleToggleArrow.setImageResource(
-                ThemeHelper.resolveResourceIdFromAttr(requireContext(), R.attr.ic_expand_more));
+                ThemeHelper.resolveResourceIdFromAttr(requireContext(), R.attr.ic_expand_less));
         videoTitleToggleArrow.setVisibility(View.VISIBLE);
-        videoDescriptionRootLayout.setVisibility(View.GONE);
-
+        videoDescriptionRootLayout.setVisibility(View.VISIBLE);
+        videoTitleTextView.setMaxLines(3);
         if (info.getUploadDate() != null) {
             videoUploadDateView.setText(Localization
                     .localizeUploadDate(activity, info.getUploadDate().date().getTime()));
