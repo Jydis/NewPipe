@@ -29,6 +29,7 @@ import org.schabi.newpipe.fragments.BaseStateFragment;
 import org.schabi.newpipe.fragments.OnScrollBelowItemsListener;
 import org.schabi.newpipe.info_list.InfoItemDialog;
 import org.schabi.newpipe.info_list.InfoListAdapter;
+import org.schabi.newpipe.player.playqueue.SinglePlayQueue;
 import org.schabi.newpipe.player.helper.PlayerHolder;
 import org.schabi.newpipe.report.ErrorActivity;
 import org.schabi.newpipe.util.NavigationHelper;
@@ -264,12 +265,15 @@ public abstract class BaseListFragment<I, N> extends BaseStateFragment<I>
         infoListAdapter.setOnStreamSelectedListener(new OnClickGesture<StreamInfoItem>() {
             @Override
             public void selected(final StreamInfoItem selectedItem) {
-                onStreamSelected(selectedItem);
+                NavigationHelper.playOnMainPlayer(
+                        activity,
+                        new SinglePlayQueue(selectedItem),
+                        true);
             }
 
             @Override
             public void held(final StreamInfoItem selectedItem) {
-                showStreamDialog(selectedItem);
+                onStreamSelected(selectedItem);
             }
         });
 
