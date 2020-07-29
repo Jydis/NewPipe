@@ -13,7 +13,7 @@
 
     <style name="LightTheme" parent="Base.LightTheme">
         <item name="colorPrimary">@color/light_youtube_primary_color</item>
-        <item name="colorPrimaryDark">@color/light_youtube_primary_color</item>
+        <item name="colorPrimaryDark">@color/light_youtube_dark_color</item>
         <item name="colorAccent">@color/light_youtube_accent_color</item>
         <item name="android:windowBackground">@color/light_background_color</item>
         <item name="windowBackground">@color/light_background_color</item>
@@ -122,7 +122,7 @@
 
     <style name="DarkTheme" parent="Base.DarkTheme">
         <item name="colorPrimary">@color/dark_youtube_primary_color</item>
-        <item name="colorPrimaryDark">@color/dark_youtube_primary_color</item>
+        <item name="colorPrimaryDark">@color/dark_youtube_dark_color</item>
         <item name="colorAccent">@color/dark_youtube_accent_color</item>
         <item name="android:windowBackground">@color/dark_background_color</item>
         <item name="windowBackground">@color/dark_background_color</item>
@@ -245,7 +245,7 @@
     <!-- Dialogs -->
     <style name="LightDialogTheme" parent="Theme.AppCompat.Light.Dialog">
         <item name="colorPrimary">@color/light_youtube_primary_color</item>
-        <item name="colorPrimaryDark">@color/light_youtube_primary_color</item>
+        <item name="colorPrimaryDark">@color/light_youtube_dark_color</item>
         <item name="colorAccent">@color/light_youtube_accent_color</item>
         <item name="android:windowBackground">@color/light_dialog_background_color</item>
         <item name="windowBackground">@color/light_dialog_background_color</item>
@@ -253,7 +253,7 @@
 
     <style name="DarkDialogTheme" parent="Theme.AppCompat.Dialog">
         <item name="colorPrimary">@color/dark_youtube_primary_color</item>
-        <item name="colorPrimaryDark">@color/dark_youtube_primary_color</item>
+        <item name="colorPrimaryDark">@color/dark_youtube_dark_color</item>
         <item name="colorAccent">@color/dark_youtube_accent_color</item>
         <item name="android:windowBackground">@color/dark_dialog_background_color</item>
         <item name="windowBackground">@color/dark_dialog_background_color</item>
@@ -261,7 +261,7 @@
 
     <style name="LightDialogMinWidthTheme" parent="Theme.AppCompat.Light.Dialog.MinWidth">
         <item name="colorPrimary">@color/light_youtube_primary_color</item>
-        <item name="colorPrimaryDark">@color/light_youtube_primary_color</item>
+        <item name="colorPrimaryDark">@color/light_youtube_dark_color</item>
         <item name="colorAccent">@color/light_youtube_accent_color</item>
         <item name="android:windowBackground">@color/light_dialog_background_color</item>
         <item name="windowBackground">@color/light_dialog_background_color</item>
@@ -269,7 +269,7 @@
 
     <style name="DarkDialogMinWidthTheme" parent="Theme.AppCompat.Dialog.MinWidth">
         <item name="colorPrimary">@color/dark_youtube_primary_color</item>
-        <item name="colorPrimaryDark">@color/dark_youtube_primary_color</item>
+        <item name="colorPrimaryDark">@color/dark_youtube_dark_color</item>
         <item name="colorAccent">@color/dark_youtube_accent_color</item>
         <item name="android:windowBackground">@color/dark_dialog_background_color</item>
         <item name="windowBackground">@color/dark_dialog_background_color</item>
@@ -294,7 +294,7 @@
 
     <style name="OldVideoPlayerTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/light_youtube_primary_color</item>
-        <item name="colorPrimaryDark">@color/light_youtube_primary_color</item>
+        <item name="colorPrimaryDark">@color/light_youtube_dark_color</item>
         <item name="colorAccent">@color/light_youtube_accent_color</item>
         <item name="android:windowFullscreen">false</item>
         <item name="android:windowActionBarOverlay">true</item>
