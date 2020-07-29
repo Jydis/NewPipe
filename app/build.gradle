@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-apply plugin: 'checkstyle'
+//apply plugin: 'checkstyle'
 
 android {
     compileSdkVersion 29
@@ -81,7 +81,7 @@ android {
 
 ext {
     icepickVersion = '3.2.0'
-    checkstyleVersion = '8.32'
+//    checkstyleVersion = '8.32'
     stethoVersion = '1.5.1'
     leakCanaryVersion = '2.2'
     exoPlayerVersion = '2.11.6'
@@ -97,46 +97,46 @@ ext {
 //    ktlint
 //}
 
-checkstyle {
-    configFile rootProject.file('checkstyle.xml')
-    ignoreFailures false
-    showViolations true
-    toolVersion = checkstyleVersion
-}
+//checkstyle {
+//    configFile rootProject.file('checkstyle.xml')
+//    ignoreFailures true
+//    showViolations true
+//    toolVersion = checkstyleVersion
+//}
 
-task runCheckstyle(type: Checkstyle) {
-    source 'src'
-    include '**/*.java'
-    exclude '**/gen/**'
-    exclude '**/R.java'
-    exclude '**/BuildConfig.java'
-    exclude 'main/java/us/shandian/giga/**'
+//task runCheckstyle(type: Checkstyle) {
+//    source 'src'
+//    include '**/*.java'
+//    exclude '**/gen/**'
+//    exclude '**/R.java'
+//    exclude '**/BuildConfig.java'
+//    exclude 'main/java/us/shandian/giga/**'
+//
+//    classpath = configurations.checkstyle
+//
+//    showViolations true
+//
+//    reports {
+//        xml.enabled true
+//        html.enabled true
+//    }
+//}
 
-    classpath = configurations.checkstyle
+//task runKtlint(type: JavaExec) {
+//    main = "com.pinterest.ktlint.Main"
+//    classpath = configurations.ktlint
+//    args "src/**/*.kt"
+//}
+//
+//task formatKtlint(type: JavaExec) {
+//    main = "com.pinterest.ktlint.Main"
+//    classpath = configurations.ktlint
+//    args "-F", "src/**/*.kt"
+//}
 
-    showViolations true
-
-    reports {
-        xml.enabled true
-        html.enabled true
-    }
-}
-
-task runKtlint(type: JavaExec) {
-    main = "com.pinterest.ktlint.Main"
-    classpath = configurations.ktlint
-    args "src/**/*.kt"
-}
-
-task formatKtlint(type: JavaExec) {
-    main = "com.pinterest.ktlint.Main"
-    classpath = configurations.ktlint
-    args "-F", "src/**/*.kt"
-}
-
-afterEvaluate {
-    preDebugBuild.dependsOn runCheckstyle, runKtlint
-}
+//afterEvaluate {
+//    preDebugBuild.dependsOn runCheckstyle, runKtlint
+//}
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -144,8 +144,8 @@ dependencies {
     implementation "frankiesardo:icepick:${icepickVersion}"
     kapt "frankiesardo:icepick-processor:${icepickVersion}"
 
-    checkstyle "com.puppycrawl.tools:checkstyle:${checkstyleVersion}"
-    ktlint "com.pinterest:ktlint:0.35.0"
+//    checkstyle "com.puppycrawl.tools:checkstyle:${checkstyleVersion}"
+//    ktlint "com.pinterest:ktlint:0.35.0"
 
     debugImplementation "com.facebook.stetho:stetho:${stethoVersion}"
     debugImplementation "com.facebook.stetho:stetho-okhttp3:${stethoVersion}"
