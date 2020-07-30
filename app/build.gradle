@@ -89,13 +89,7 @@ ext {
     androidxRoomVersion = '2.2.5'
     groupieVersion = '2.8.0'
     markwonVersion = '4.3.1'
-}
-
-checkstyle {
-    configFile rootProject.file('checkstyle.xml')
-    ignoreFailures false
-    showViolations true
-    toolVersion = checkstyleVersion
+    googleAutoServiceVersion = '1.0-rc7'
 }
 
 //configurations {
@@ -170,7 +164,7 @@ dependencies {
         exclude module: 'support-annotations'
     }
 
-    implementation 'com.github.TeamNewPipe:NewPipeExtractor:bda83fe6a5b9a8a0751669fbc444fa49d72d0d2f'
+    implementation 'com.github.TeamNewPipe:NewPipeExtractor:5ac80624a40f4c600ae493e66881b5bf008f0ddb'
 
     implementation "com.github.TeamNewPipe:nanojson:1d9e1aea9049fc9f85e68b43ba39fe7be1c1f751"
     implementation "org.jsoup:jsoup:1.13.1"
