@@ -293,7 +293,7 @@ public final class ExtractorHelper {
             } else if (exception instanceof ContentNotSupportedException) {
                 Toast.makeText(context, R.string.content_not_supported, Toast.LENGTH_LONG).show();
             } else {
-                final int errorId = exception instanceof YoutubeStreamExtractor.DeobfuscateException
+                final int errorId = exception instanceof YoutubeStreamExtractor.DecryptException
                         ? R.string.youtube_signature_deobfuscation_error
                         : exception instanceof ParsingException
                         ? R.string.parsing_error : R.string.general_error;

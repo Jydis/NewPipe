@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-apply plugin: 'checkstyle'
+//apply plugin: 'checkstyle'
 
 android {
     compileSdkVersion 29
@@ -86,7 +86,7 @@ android {
 
 ext {
     icepickVersion = '3.2.0'
-    checkstyleVersion = '8.36.2'
+//    checkstyleVersion = '8.36.2'
     stethoVersion = '1.5.1'
     leakCanaryVersion = '2.2'
     exoPlayerVersion = '2.11.8'
@@ -97,35 +97,35 @@ ext {
     googleAutoServiceVersion = '1.0-rc7'
 }
 
-configurations {
-    checkstyle
-//    ktlint
-}
-
-checkstyle {
-    configFile rootProject.file('checkstyle.xml')
-    ignoreFailures false
-    showViolations true
-    toolVersion = checkstyleVersion
-}
-
-task runCheckstyle(type: Checkstyle) {
-    source 'src'
-    include '**/*.java'
-    exclude '**/gen/**'
-    exclude '**/R.java'
-    exclude '**/BuildConfig.java'
-    exclude 'main/java/us/shandian/giga/**'
-
-    classpath = configurations.checkstyle
-
-    showViolations true
-
-    reports {
-        xml.enabled true
-        html.enabled true
-    }
-}
+//configurations {
+//    checkstyle
+////    ktlint
+//}
+//
+//checkstyle {
+//    configFile rootProject.file('checkstyle.xml')
+//    ignoreFailures false
+//    showViolations true
+//    toolVersion = checkstyleVersion
+//}
+//
+//task runCheckstyle(type: Checkstyle) {
+//    source 'src'
+//    include '**/*.java'
+//    exclude '**/gen/**'
+//    exclude '**/R.java'
+//    exclude '**/BuildConfig.java'
+//    exclude 'main/java/us/shandian/giga/**'
+//
+//    classpath = configurations.checkstyle
+//
+//    showViolations true
+//
+//    reports {
+//        xml.enabled true
+//        html.enabled true
+//    }
+//}
 
 //task runKtlint(type: JavaExec) {
 //    main = "com.pinterest.ktlint.Main"
@@ -139,9 +139,9 @@ task runCheckstyle(type: Checkstyle) {
 //    args "-F", "src/**/*.kt"
 //}
 
-afterEvaluate {
-    preDebugBuild.dependsOn runCheckstyle //, runKtlint
-}
+//afterEvaluate {
+//    preDebugBuild.dependsOn runCheckstyle //, runKtlint
+//}
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
@@ -149,7 +149,7 @@ dependencies {
     implementation "frankiesardo:icepick:${icepickVersion}"
     kapt "frankiesardo:icepick-processor:${icepickVersion}"
 
-    checkstyle "com.puppycrawl.tools:checkstyle:${checkstyleVersion}"
+//    checkstyle "com.puppycrawl.tools:checkstyle:${checkstyleVersion}"
 //    ktlint "com.pinterest:ktlint:0.35.0"
 
     debugImplementation "com.facebook.stetho:stetho:${stethoVersion}"
@@ -171,7 +171,7 @@ dependencies {
 
     // NewPipe dependencies
     // You can use a local version by uncommenting a few lines in settings.gradle
-    implementation 'com.github.TeamNewPipe:NewPipeExtractor:a8665fd97f223f41190fa04569af723be9e03008'
+    implementation 'com.github.TeamNewPipe:NewPipeExtractor:v0.20.2'
     implementation "com.github.TeamNewPipe:nanojson:1d9e1aea9049fc9f85e68b43ba39fe7be1c1f751"
 
     implementation "org.jsoup:jsoup:1.13.1"

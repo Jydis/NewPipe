@@ -1641,7 +1641,7 @@ public class VideoDetailFragment
             return true;
         }
 
-        final int errorId = exception instanceof YoutubeStreamExtractor.DeobfuscateException
+        final int errorId = exception instanceof YoutubeStreamExtractor.DecryptException
                 ? R.string.youtube_signature_deobfuscation_error
                 : exception instanceof ExtractionException
                 ? R.string.parsing_error
